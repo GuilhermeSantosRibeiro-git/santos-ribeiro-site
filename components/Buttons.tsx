@@ -1,0 +1,24 @@
+import Link from "next/link";
+import { whatsappUrl } from "@/lib/site";
+
+export function PrimaryButton({ href = whatsappUrl, children = "Solicitar orçamento" }: { href?: string; children?: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-[#082f63] transition hover:-translate-y-0.5 hover:bg-slate-100"
+    >
+      {children}
+    </Link>
+  );
+}
+
+export function SecondaryButton({ href = "/contato", children = "Fale com um especialista" }: { href?: string; children?: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex items-center justify-center rounded-full border border-white/35 px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+    >
+      {children}
+    </Link>
+  );
+}
