@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
 import { phoneDisplay, whatsappUrl } from "@/lib/site";
 
@@ -23,7 +22,7 @@ export default function Contato() {
           <aside className="rounded-3xl bg-slate-100 p-7">
             <h2 className="text-2xl font-black text-[#082f63]">Canais de atendimento</h2>
             <p className="mt-4 leading-7 text-slate-600">Use o WhatsApp para contato rápido ou preencha o formulário de orçamento com os detalhes iniciais.</p>
-            <Link href={whatsappUrl} className="mt-6 inline-flex rounded-full bg-[#082f63] px-6 py-4 text-sm font-black text-white">WhatsApp {phoneDisplay}</Link>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-full bg-[#082f63] px-6 py-4 text-sm font-black text-white">WhatsApp {phoneDisplay}</a>
             <div className="mt-8 grid gap-4 text-sm text-slate-600">
               <p><strong className="text-slate-950">Atendimento:</strong> Engenharia, Infraestrutura, Construtora, Ambiental e SST.</p>
               <p><strong className="text-slate-950">Região:</strong> Minas Gerais e demandas sob consulta.</p>

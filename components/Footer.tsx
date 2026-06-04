@@ -10,9 +10,9 @@ export function Footer() {
           <p className="mt-4 max-w-xl text-sm leading-7 text-blue-100">
             Engenharia, Infraestrutura e Soluções para o Desenvolvimento. Atuamos de forma integrada para transformar projetos em ativos sólidos, seguros e sustentáveis.
           </p>
-          <Link href={whatsappUrl} className="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-[#082f63]">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-[#082f63]">
             Chamar no WhatsApp {phoneDisplay}
-          </Link>
+          </a>
         </div>
         <div>
           <p className="font-bold">Divisões</p>

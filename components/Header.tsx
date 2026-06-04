@@ -21,12 +21,14 @@ export function Header() {
           ))}
         </nav>
 
-        <Link
+        <a
           href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-full bg-[#082f63] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#061f42] md:inline-flex"
         >
           WhatsApp {phoneDisplay}
-        </Link>
+        </a>
       </div>
     </header>
   );

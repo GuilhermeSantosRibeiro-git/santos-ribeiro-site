@@ -3,12 +3,14 @@ import { whatsappUrl } from "@/lib/site";
 
 export function PrimaryButton({ href = whatsappUrl, children = "Solicitar orçamento" }: { href?: string; children?: React.ReactNode }) {
   return (
-    <Link
+    <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-bold text-[#082f63] transition hover:-translate-y-0.5 hover:bg-slate-100"
     >
       {children}
-    </Link>
+    </a>
   );
 }
 
