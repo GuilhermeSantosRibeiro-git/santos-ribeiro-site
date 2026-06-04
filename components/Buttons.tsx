@@ -1,7 +1,13 @@
 import Link, { type LinkProps } from "next/link";
+import type { ReactNode } from "react";
 import { whatsappUrl } from "@/lib/site";
 
-export function PrimaryButton({ href = whatsappUrl, children = "Solicitar orçamento" }: { href?: string; children?: React.ReactNode }) {
+type ExternalButtonProps = {
+  href?: string;
+  children?: ReactNode;
+};
+
+export function PrimaryButton({ href = whatsappUrl, children = "Solicitar orçamento" }: ExternalButtonProps) {
   return (
     <a
       href={href}
@@ -14,12 +20,12 @@ export function PrimaryButton({ href = whatsappUrl, children = "Solicitar orçam
   );
 }
 
-type SecondaryButtonProps = {
+type InternalButtonProps = {
   href?: LinkProps["href"];
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
-export function SecondaryButton({ href = "/contato", children = "Fale com um especialista" }: SecondaryButtonProps) {
+export function SecondaryButton({ href = "/contato", children = "Fale com um especialista" }: InternalButtonProps) {
   return (
     <Link
       href={href}
